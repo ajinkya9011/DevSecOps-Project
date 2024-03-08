@@ -16,6 +16,9 @@ spec:
     spec:
       containers:
       - name: netflix-app
-        image: nasi101/netflix:latest
+        image: devops8983.azurecr.io/netflix:latest
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
+      imagePullSecrets:
+      - name: acr-secret
